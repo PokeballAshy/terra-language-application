@@ -1,0 +1,10 @@
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "WakaTime.vscode-wakatime",
+        "ritwickdey.live-server"
+      ]
+    }
+  }
+}
