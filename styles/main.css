@@ -16,9 +16,9 @@
 }
 
 body {
-    background-color: var(--cream)
-    color: var(--espresso))
-    font-family: var(--font-base)
+    background-color: var(--cream);
+    color: var(--espresso);
+    font-family: var(--font-base);
     line-height: 1.5;
     min-height: 100vh;
 }
