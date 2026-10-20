@@ -35,7 +35,7 @@ function iniNavigation() {
     </button>
 
     <!-- Cursive toddle -->
-    <button type="button" id="cursive-toggle" class="toggle-btn" ${cursiveActive ? 'active' : ''}">
+    <button type="button" id="cursive-toggle" class="toggle-btn ${cursiveActive ? 'active' : ''}">
      Режим: <span id="cursive-status">${cursiveActive ? 'Курси́в' : 'Блок'}</span>
     </button>
    </div>

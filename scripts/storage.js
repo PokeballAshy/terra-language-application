@@ -20,7 +20,7 @@ export const Storage = {
         localStorage.setItem(KEYS.STRESS, String(bool));
     },
 
-    getCursiveEnabled(bool) {
+    getCursiveEnabled() {
         return localStorage.getItem(KEYS.CURSIVE) === 'true';
     },
     setCursiveEnabled(bool) {
