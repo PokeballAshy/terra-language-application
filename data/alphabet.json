@@ -1,0 +1,37 @@
+[
+    {
+        "letter": "А",
+        "name": "А",
+        "soundHint": "a as in father",
+        "isFalseFriend": false,
+        "cursiveLookalike": "Resembles handwritten Latin 'A' and 'a'",
+        "exampleWord": "а́дрес",
+        "phoneticSpelling": "AH-dres",
+        "a1Note": "Always pronounced like 'ah' when stressed.",
+        "b1Note": "Undergoes weak reduction to [ɐ] in immediately pre-tonic syllables.",
+        "c1Note": "Retains open central unrounded quality strictly under primary tonic stress."
+    },
+    {
+        "letter": "Б",
+        "name": "Бэ",
+        "soundHint": "b as in bat",
+        "isFalseFriend": false,
+        "cursiveLookalike": "Lowercase cursive looks like Latin 'd' or a digit 6 with a top arm.",
+        "exampleWord": "биле́т",
+        "phoneticSpelling": "bee-LYET",
+        "a1Note": "Voiced 'b' sound like in English.",
+        "b1Note": "Devoices to [p] at the end of words or before voiceless consonants.",
+        "c1Note": "Undergoes regressive voice assimilation, triggering voicing in preceding obstruents."
+    },
+    {
+        "letter": "В",
+        "name": "Вэ",
+        "soundHint": "v as in voice (NOT English B, even though it looks like it!",
+        "isFalseFriend": true,
+        "cursiveLookalike": "Looks identical to English 'B'/'b' but sounds like 'V'",
+        "exampleWord": "во́да",
+        "a1Note": "False friend: written like Latin 'B', but sounds like English 'V'.",
+        "b1Note": "Devoices to [f] in word-final position (e.g. гото́в -> ga-TOF).",
+        "c1Note": "Voiced labiodental fricative (a type of consonant sound produced by placing the top teeth against the bottom lip and forcing air through the narrow gap to create friction or a hissing sound), it acts transparently in certain cluster voicing rules."
+    }
+]
