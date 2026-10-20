@@ -25,5 +25,5 @@ export const Storage = {
     },
     setCursiveEnabled(bool) {
         localStorage.setItem(KEYS.CURSIVE, String(bool));
-    },
+    }
 };
