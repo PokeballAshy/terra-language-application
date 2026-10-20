@@ -66,3 +66,45 @@ body.cursive-mode .example-word {
     gap: 0.75rem;
     align-items: center;
 }
+
+.toggle-group {
+    display: inline-flex;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--cream);
+}
+
+.cefr-btn,
+.toggle-btn {
+    background-color: transparent;
+    color: var(--cream);
+    border: 1px solid var(--cream);
+    padding: 0.4rem 0.8rem;
+    font-family: var(--font-en);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.toggle-group .cefr-btn {
+    border: none;
+    border-right: 1px solid var(--cream);
+    border-radius: 0;
+}
+
+.toggle-group .cefr-btn:last-child {
+    border-right: none;
+}
+
+/*Active & Hover States IM SO LOCKED INNNN*/
+.cefr-btn:hover,
+.toggle-btn:hover {
+    background-color: rgba(248, 246, 240, 0.15);
+}
+
+.cefr-btn.active,
+.toggle-btn.active {
+    background-color: var(--amber);
+    color: var(--espresso);
+    font-weight: 600;
+}
