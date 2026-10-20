@@ -5,8 +5,8 @@
     --espresso: #322019;
     --cream: #F8F6F0;
     
-    --font-base: 'Inter', system-ui, -apple-system, sans-serif;
-    --font-cursive: 'Caveat', cursive;
+    --font-en: 'Literata', Georgia, serif;
+    --font-ru: 'Golos Text', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 * {
@@ -18,7 +18,7 @@
 body {
     background-color: var(--cream);
     color: var(--espresso);
-    font-family: var(--font-base);
+    font-family: var(--font-en);
     line-height: 1.5;
     min-height: 100vh;
 }
@@ -37,9 +37,19 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* russian cursive sight reading mode weewoo */
-.cursive-mode {
-    font-family: var(--font-cursive) !important;
+/* Russian typography AAAAAAAAAAAAAAAAAAAA */
+:lang(ru),
+.ru-text,
+.letter-card .letter,
+.example-word {
+    font-family: var(--font-ru);
+}
+
+/* Russian cursive sight-reading mode */
+body.cursive-mode :lang(ru),
+body.cursive-mode .ru-text,
+body.cursive-mode .letter-card .letter,
+body.cursive-mode .example-word {
     font-style: italic;
 }
 
