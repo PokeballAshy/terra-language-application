@@ -7,7 +7,7 @@ export function formatRussianText(text) {
     return stressActive ? text : text.normalize('NFD').replace(/\u0301/g, '').normalize('NFC');
 }
 
-function iniNavigation() {
+function initNavigation() {
     const header = document.getElementById('global-header');
     if (!header) return;
 
@@ -93,7 +93,7 @@ function iniNavigation() {
 
 //Initialize when DOM is parsed AAAAAAAAAA
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', iniNavigation);
+    document.addEventListener('DOMContentLoaded', initNavigation);
 } else {
-    iniNavigation();
+    initNavigation();
 }
