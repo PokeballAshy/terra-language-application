@@ -30,6 +30,7 @@
         "isFalseFriend": true,
         "cursiveLookalike": "Looks identical to English 'B'/'b' but sounds like 'V'",
         "exampleWord": "во́да",
+        "phoneticSpelling": "va-DAH",
         "a1Note": "False friend: written like Latin 'B', but sounds like English 'V'.",
         "b1Note": "Devoices to [f] in word-final position (e.g. гото́в -> ga-TOF).",
         "c1Note": "Voiced labiodental fricative (a type of consonant sound produced by placing the top teeth against the bottom lip and forcing air through the narrow gap to create friction or a hissing sound), it acts transparently in certain cluster voicing rules."
@@ -59,8 +60,8 @@
         "c1Note": "Subject to alveolar dental assimilation and total elision in clusters like -здн-."
     },
     {
-        "letter": "E",
-        "name": "E",
+        "letter": "Е",
+        "name": "Е",
         "soundHint": "ye as in yes",
         "isFalseFriend": false,
         "cursiveLookalike": "Resembles handwritten Latin 'E'/'e'",
@@ -152,7 +153,7 @@
         "phoneticSpelling": "loo-NAH",
         "a1Note": "Hard 'l' is dark, pronounced with the back of the tongue raised.",
         "b1Note": "Softens drastically before soft vowels or ь to a bright European [lʲ].",
-        "c1Note": "the 'L' sound is with two different styles: a regular, clear 'L' versus a deeper, 'dark L' sound"
+        "c1Note": "The 'L' sound has two different styles: a regular, clear 'L' versus a deeper, 'dark L' sound."
     },
     {
         "letter": "М",
