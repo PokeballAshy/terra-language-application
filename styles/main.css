@@ -246,3 +246,40 @@ body.cursive-mode .example-word {
     font-weight: 600;
     color: var(--espresso);
 }
+
+/* Category by filter bar i will litr explode */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-pill {
+    background-color: transparent;
+    color: var(--espresso);
+    border: 1.5px solid #ddd;
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font-family: var(--font-en);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer; 
+    transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+    border-color: var(--baby-blue);
+    background-color: rgba(163, 206, 241, 0.15);
+}
+
+.filter-pill.active {
+    background-color: var(--espresso);
+    color: var(--cream);
+    border-color: var(espresso);
+}
+
+/* Card filter transition ￣へ￣*/
+.letter-card.is-filtered-out {
+    display: none;
+}
