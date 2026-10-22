@@ -1,0 +1,32 @@
+[
+    {
+        "word": "шинши́лла",
+        "translation": "chinchilla",
+        "letters": ["ш", "и", "н", "ш", "и", "л", "л", "а"],
+        "trapNote": "A classic test: in cursive, 'шинши' becomes a single wave of 11 identical vertical strokes."
+    },
+    {
+        "word": "ли́лия",
+        "translation": "lily",
+        "letters": ["л", "и", "л", "и", "я"],
+        "trapNote": "'л' and 'и' blend into consecutive bottom-hook arches."
+    },
+    {
+        "word": "ми́лый",
+        "translation": "sweet / dear",
+        "letters": ["м", "и", "л", "ы", "й"],
+        "trapNote": "'м', 'и', and 'л' run together in identical rhythmic peaks."
+    },
+    {
+        "word": "дыша́ть",
+        "translation": "to breathe",
+        "letters": ["д", "ы", "ш", "а", "т", "ь"],
+        "trapNote": "The ascenders and loops of 'д' and 'ш' can confuse eye tracking."
+    },
+    {
+        "word": "пти́ца",
+        "translation": "bird",
+        "letters": ["п", "т", "и", "ц", "а"],
+        "trapNote": "Lowercase cursive 'т' looks like Latin 'm', right next to 'п' and 'и'."
+    }
+]
