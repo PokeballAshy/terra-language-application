@@ -14,7 +14,19 @@
     <header id="global-header" class="sticky-nav"></header>
 
     <main class="container">
-        <section id="alphabet-grid" class="alphabet-grid" aria-label="Russian Alphabet"></section>
+        <div class="alphabet-column">
+            <!-- Category filter bar -->
+            <div class="filter-bar" id="category-filters">
+                <button type="button" class="filter-pill active" data-category="all">All 33</button>
+                <button type="button" class="filter-pill" data-category="true-friends">True Friends</button>
+                <button type="button" class="filter-pill" data-category="false-friends">False Friends</button>
+                <button type="button" class="filter-pill" data-category="slavic">Slavic Originals</button>
+                <button type="button" class="filter-pill" data-category="modifiers">Modifiers (Ъ, Ы, Ь)</button>
+            </div>
+
+            <section id="alphabet-grid" class="alphabet-grid" aria-label="Russian Alphabet"></section>
+        </div>
+        
         <aside id="inspector-panel" class="inspector-panel" hidden aria-label="Letter Details"></aside>
     </main>
 
