@@ -63,7 +63,7 @@
         "letter": "Е",
         "name": "Е",
         "soundHint": "ye as in yes",
-        "isFalseFriend": false,
+        "isFalseFriend": true,
         "cursiveLookalike": "Resembles handwritten Latin 'E'/'e'",
         "exampleWord": "еда́",
         "phoneticSpelling": "ye-DAH",
