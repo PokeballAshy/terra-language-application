@@ -4,6 +4,14 @@ import { formatRussianText } from "./utils.js";
 let alphabetData = []
 let selectedLetter = null;
 
+const CATEGORIES = {
+    "true-friends": new Set(["А", "К", "М", "О", "Т"]),
+    "false-friends": new Set(["В", "Е", "Н", "Р", "С", "У", "Х"]),
+    "slavic": new Set(["Б", "Г", "Д", "Ж", "З", "И", "Й", "Л", "П", "Ф", "Ц", "Ч", "Ш", "Щ", "Э", "Ю", "Я"]),
+    "modifiers": new Set(["Ъ", "Ы", "Ь"])
+};
+let currentCategory = "all";
+
 const grid = document.getElementById("alphabet-grid");
 const inspector = document.getElementById("inspector-panel");
 
@@ -13,6 +21,7 @@ async function loadAlphabet() {
         const response = await fetch("./data/alphabet.json");
         alphabetData = await response.json();
         renderGrid();
+        setupCategoryFilters();
 
         //Select first letter by default if none is selected
         if (alphabetData.length > 0) {
@@ -117,4 +126,38 @@ if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", loadAlphabet);
 } else {
     loadAlphabet();
+}
+
+// Foonctions for the Category filters (⌐■_■)
+function setupCategoryFilters() {
+    const filterBar = document.getElementById("category-filters");
+    if (!filterBar) return;
+    
+    filterBar.addEventListener("click", (e) => {
+        const btn = e.target.closest(".filter-pill");
+        if (!btn) return;
+
+        filterBar.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
+        btn.classList.add("active");
+
+        currentCategory = btn.dataset.category;
+        applyCategoryFilter();
+    });
+}
+
+function applyCategoryFilter() {
+    const cards = document.querySelectorAll(".letter-card");
+    cards.forEach(card => {
+        const letter = card.querySelector(".letter")?.textContent.trim();
+        if (currentCategory === "all") {
+            card.classList.remove("is-filtered-out");
+        } else {
+            const allowedLetters = CATEGORIES[currentCategory];
+            if (allowedLetters && allowedLetters.has(letter)) {
+                card.classList.remove("is-filtered-out");
+            } else {
+                card.classList.add("is-filtered-out");
+            }
+        }
+    })
 }
