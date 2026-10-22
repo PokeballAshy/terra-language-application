@@ -194,7 +194,7 @@ body.cursive-mode .example-word {
 .inspector-header {
     display: flex;
     align-items: center;
-    gap: 1 rem;
+    gap: 1rem;
     border-bottom: 2px solid #eee;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
