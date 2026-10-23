@@ -171,9 +171,9 @@ async function loadTraps() {
     try {
         const response = await fetch("./data/traps.json");
         trapsData = await response.json();
-        if (trapsData.lenght > 0) {
+        if (trapsData.length > 0) {
             renderTrapSelector();
-            displayTrapWord;
+            displayTrapWord(0);
         }
     } catch (err) {
         console.error("Failed to load cursive traps:", err);
