@@ -1,32 +1,74 @@
 [
-    {
-        "word": "шинши́лла",
-        "translation": "chinchilla",
-        "letters": ["ш", "и", "н", "ш", "и", "л", "л", "а"],
-        "trapNote": "A classic test: in cursive, 'шинши' becomes a single wave of 11 identical vertical strokes."
-    },
-    {
-        "word": "ли́лия",
-        "translation": "lily",
-        "letters": ["л", "и", "л", "и", "я"],
-        "trapNote": "'л' and 'и' blend into consecutive bottom-hook arches."
-    },
-    {
-        "word": "ми́лый",
-        "translation": "sweet / dear",
-        "letters": ["м", "и", "л", "ы", "й"],
-        "trapNote": "'м', 'и', and 'л' run together in identical rhythmic peaks."
-    },
-    {
-        "word": "дыша́ть",
-        "translation": "to breathe",
-        "letters": ["д", "ы", "ш", "а", "т", "ь"],
-        "trapNote": "The ascenders and loops of 'д' and 'ш' can confuse eye tracking."
-    },
-    {
-        "word": "пти́ца",
-        "translation": "bird",
-        "letters": ["п", "т", "и", "ц", "а"],
-        "trapNote": "Lowercase cursive 'т' looks like Latin 'm', right next to 'п' and 'и'."
-    }
+  {
+    "word": "шинши́лла",
+    "translation": "chinchilla",
+    "letters": ["ш", "и", "н", "ш", "и", "л", "л", "а"],
+    "trapNote": "A classic test: in cursive, 'шинши' becomes a single wave of 11 identical vertical strokes."
+  },
+  {
+    "word": "ли́лия",
+    "translation": "lily",
+    "letters": ["л", "и", "л", "и", "я"],
+    "trapNote": "'л' and 'и' blend into consecutive bottom-hook arches."
+  },
+  {
+    "word": "ми́лый",
+    "translation": "sweet / dear",
+    "letters": ["м", "и", "л", "ы", "й"],
+    "trapNote": "'м', 'и', and 'л' run together in identical rhythmic peaks."
+  },
+  {
+    "word": "дыша́ть",
+    "translation": "to breathe",
+    "letters": ["д", "ы", "ш", "а", "т", "ь"],
+    "trapNote": "The ascenders and loops of 'д' and 'ш' can confuse eye tracking."
+  },
+  {
+    "word": "пти́ца",
+    "translation": "bird",
+    "letters": ["п", "т", "и", "ц", "а"],
+    "trapNote": "Lowercase cursive 'т' looks like Latin 'm', right next to 'п' and 'и'."
+  },
+  {
+    "word": "защища́ть",
+    "translation": "to protect",
+    "letters": ["з", "а", "щ", "и", "щ", "а", "т", "ь"],
+    "trapNote": "Double 'щ' descender tails sandwiching 'и'."
+  },
+  {
+    "word": "тишина́",
+    "translation": "silence",
+    "letters": ["т", "и", "ш", "и", "н", "а"],
+    "trapNote": "'т' (looking like 'm') blends directly into 'и' and 'ш'."
+  },
+  {
+    "word": "лимо́н",
+    "translation": "lemon",
+    "letters": ["л", "и", "м", "о", "н"],
+    "trapNote": "Continuous connected waves linking 'л', 'и', and 'м'."
+  },
+  {
+    "word": "пиши́",
+    "translation": "write! (imperative)",
+    "letters": ["п", "и", "ш", "и"],
+    "trapNote": "Nine vertical stems in a row with minimal baseline distinction."
+  },
+  {
+    "word": "мы́ло",
+    "translation": "soap",
+    "letters": ["м", "ы", "л", "о"],
+    "trapNote": "Connecting hook of 'м' blends into the round belly of 'ы'."
+  },
+  {
+    "word": "пла́мя",
+    "translation": "flame",
+    "letters": ["п", "л", "а", "м", "я"],
+    "trapNote": "Transition hooks between 'п', 'л', and 'м'."
+  },
+  {
+    "word": "ши́шка",
+    "translation": "pinecone / bump",
+    "letters": ["ш", "и", "ш", "к", "а"],
+    "trapNote": "Triple-stemmed 'ш' flanking single-stemmed 'и'."
+  }
 ]
