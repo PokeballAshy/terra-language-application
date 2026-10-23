@@ -258,13 +258,13 @@ function initPracticeCanvas(letter) {
         if (showGuideGrid) {
             ctx.save();
             ctx.strokeStyle = "#e8e8e8";
-            ctx.clientWidth = 1;
+            ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(0,45); ctx.lineTo(canvas.width, 45);
             ctx.moveTo(0, 85); ctx.lineTo(canvas.width, 85);
-            ctx.moveTo(0, 125); ctx.lineTo(canvas.width, 125);f
+            ctx.moveTo(0, 125); ctx.lineTo(canvas.width, 125);
             for (let x = -40; x < canvas.width; x += 35) {
-                ctx.moveTO(x, 160);
+                ctx.moveTo(x, 160);
                 ctx.lineTo(x + 55,0);
             }
             ctx.stroke();
