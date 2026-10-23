@@ -28,6 +28,3 @@ IT is built to take learners from absolute zero to functional reading and speaki
 ### 1. Live Demo (Fastest)
 No installation or local setup required. Open the live deployment directly in your browser:
 🔗 **[Launch Terra Russian Trainer](https://pokeballashy.github.io/terra-language-application/alphabet.html)**
-
-### 2. Running Locally
-Because Terra is built purely with vanilla web standards, you only need a local web server:
