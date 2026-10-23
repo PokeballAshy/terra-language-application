@@ -283,3 +283,100 @@ body.cursive-mode .example-word {
 .letter-card.is-filtered-out {
     display: none;
 }
+
+/* Cursive trap decoder chat luteal is genuinely killing me rn*/
+.trap-decoder-section {
+    margin-top: 3.5rem;
+    padding: 2rem;
+    background: #fff;
+    border: 2px solid var(--espresso);
+    border-radius: 12px;
+}
+
+.trap-decoder-header h2 {
+    font-size: 1.5rem;
+    color: var(--wine-red);
+    margin-bottom: 0.25rem;
+}
+
+.trap-decoder-header p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.trap-selector-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.trap-pill {
+    background: transparent;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.trap-pill:hover,
+.trap-pill.active {
+    background: var(--espresso);
+    color: var(--cream);
+    border-color: var(--espresso);
+}
+
+.trap-stage {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background: var(--cream);
+    border-radius: 8px;
+}
+
+/*Big Russian Cursive Text (•_•)*/
+.trap-word-display {
+    font-size: 4.5rem;
+    line-height: 1.2;
+    font-style: italic; 
+    letter-spacing: 0.02em;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+.trap-letter-span {
+    display: inline-block;
+    padding: 0 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.trap-letter-span:hover {
+    transform: translateY(-4px) scale(1.1);
+}
+
+/* Alternating breakdown colors YAY ALMOST DONE*/
+.trap-letter-span:nth-child(4n + 1):hover { background: #ffe082; color: #322019; }
+.trap-letter-span:nth-child(4n + 2):hover { background: #a3cef1; color: #322019; }
+.trap-letter-span:nth-child(4n + 3):hover { background: #ffcdd2; color: #322019; }
+.trap-letter-span:nth-child(4n + 4):hover { background: #c8e6c9; color: #322019; }
+
+.trap-meta {
+    margin-top: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--espresso);
+}
+
+.trap-note {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -22,6 +22,7 @@ async function loadAlphabet() {
         alphabetData = await response.json();
         renderGrid();
         setupCategoryFilters();
+        loadTraps();
 
         //Select first letter by default if none is selected
         if (alphabetData.length > 0) {
@@ -160,4 +161,68 @@ function applyCategoryFilter() {
             }
         }
     })
+}
+
+// --- Cursive Trap decodey logic yippie ---
+let trapsData = [];
+let currentTrapIndex = 0;
+
+async function loadTraps() {
+    try {
+        const response = await fetch("./data/traps.json");
+        trapsData = await response.json();
+        if (trapsData.lenght > 0) {
+            renderTrapSelector();
+            displayTrapWord;
+        }
+    } catch (err) {
+        console.error("Failed to load cursive traps:", err);
+    }
+}
+
+function renderTrapSelector() {
+    const bar= document.getElementById("trap-selector-bar");
+    if (!bar) return;
+    bar.innerHTML = "";
+
+    trapsData.forEach((item, index) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = `trap-pill ru-text ${index === 0 ? 'active' : ''}`;
+        btn.textContent = item.word;
+        btn.addEventListener("click", () => {
+            bar.querySelectorAll(".trap-pill").forEach(p => p.classList.remove("active"));
+            btn.classList.add("active");
+            displayTrapWord(index);
+        });
+        bar.appendChild(btn);
+    });
+}
+
+function displayTrapWord(index) {
+    currentTrapIndex = index;
+    const trap = trapsData[index];
+    if (!trap) return;
+
+    const displayEl = document.getElementById("trap-word-display");
+    const metaEl = document.getElementById("trap-meta");
+    const noteEl = document.getElementById("trap-note");
+
+    if (displayEl) {
+        displayEl.innerHTML = "";
+        trap.letters.forEach(char => {
+            const span = document.createElement("span");
+            span.className = "trap-letter-span";
+            span.textContent = char;
+            span.title = `Letter: ${char}`;
+            displayEl.appendChild(span);
+        });
+    }
+
+    if (metaEl) {
+        metaEl.textContent = `${trap.word} — "${trap.translation}"`;
+    }
+    if (noteEl) {
+        noteEl.textContent = trap.trapNote;
+    }
 }
