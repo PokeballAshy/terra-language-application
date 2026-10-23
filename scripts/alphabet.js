@@ -110,7 +110,16 @@ function updateInspector() {
             <h3> Phonetics (${currentCefr}) </h3>
             <p class="cefr-note">${cefrNote}</p>
         </div>
+
+        <!-- Cursive practice pad ;n; -->
+        <div class="practice-pad-container">
+            <h3>Cursive Tracing Pad</h3>
+            div class="canvas-wrapper">
+               <canvas id="cursive-canvas" width="240" height="160"></canvas>
+            </div>
+        </div>
    `;
+   initPracticeCanvas(selectedLetter.letter);
 }
 
 //Listen for global navbar toggle changes 
@@ -224,5 +233,109 @@ function displayTrapWord(index) {
     }
     if (noteEl) {
         noteEl.textContent = trap.trapNote;
+    }
+}
+
+// HTML5 Canvas cursive practice pad logique~
+let showGuideGrid = true;
+
+function initPracticeCanvas(letter) {
+    const canvas = document.getElementById("cursive-canvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+
+    function redrawBackground() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        if (showGuideGrid) {
+            ctx.save();
+            ctx.strokeStyle = "#e8e8e8";
+            ctx.clientWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(0,45); ctx.lineTo(canvas.width, 45);
+            ctx.moveTo(0, 85); ctx.lineTo(canvas.width, 85);
+            ctx.moveTo(0, 125); ctx.lineTo(canvas.width, 125);f
+            for (let x = -40; x < canvas.width; x += 35) {
+                ctx.moveTO(x, 160);
+                ctx.lineTo(x + 55,0);
+            }
+            ctx.stroke();
+            ctx.stroke();
+        }
+
+        ctx.save();
+        ctx.fillStyle= "rgba(114, 27, 46, 0.22)";
+        ctx.font = "italic 80px 'Golos Text', serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(letter, canvas.width / 2, canvas.height / 2 + 5);
+        ctx.restore();
+    }
+
+    redrawBackground();
+
+    function getPos(e) {
+        const rect = canvas.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        return {
+            x: (clientX - rect.left) * (canvas.width / rect.width),
+            y: (clientY - rect.top) * (canvas.height / rect.height)
+        };
+    }
+
+    function startDrawing(e) {
+        isDrawing = true;
+        const pos = getPos(e);
+        lastX = pos.x;
+        lastY = pos.y;
+    }
+
+    function draw(e) {
+        if (!isDrawing) return;
+        e.preventDefault();
+        const pos = getPos(e);
+
+        ctx.strokeStyle = "#322019";
+        ctx.lineWidth = 3.5;
+        ctx.lineCap = "round";
+        ctx.lineJoin = "round";
+
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+
+        lastX = pos.x;
+        lastY = pos.y;
+    }
+
+    function stopDrawing() {
+        isDrawing = false;
+    }
+
+    canvas.onmousedown = startDrawing;
+    canvas.onmousemove = draw;
+    window.onmouseup = stopDrawing;
+
+    canvas.ontouchstart = startDrawing;
+    canvas.ontouchmove = draw;
+    window.ontouchend = stopDrawing;
+
+    const clearBtn = document.getElementById("btn-clear-canvas");
+    if (clearBtn) {
+        clearBtn.onclick = () => redrawBackground();
+    }
+
+    const gridBtn = document.getElementById("btn-grid-canvas");
+    if (gridBtn) {
+        gridBtn.onclick = () => {
+            showGuideGrid = !showGuideGrid;
+            redrawBackground();
+        };
     }
 }
