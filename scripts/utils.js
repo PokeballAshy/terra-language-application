@@ -67,7 +67,7 @@ function initNavigation() {
         Storage.setStressEnabled(nextState);
 
         stressBtn.classList.toggle('active', nextState);
-        stressStatus.textContent = nextState ? 'ON' : 'OFF'
+        stressStatus.textContent = nextState ? 'ON' : 'OFF';
 
         window.dispatchEvent(new CustomEvent('settingsChanged', {
             detail: { stress:nextState, cursive: Storage.getCursiveEnabled()}
