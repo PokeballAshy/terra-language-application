@@ -20,3 +20,14 @@ IT is built to take learners from absolute zero to functional reading and speaki
 - **The Cursive Trap Decoder:** Interactive sight-reading tool featuring 12 notorious cursive traps (e.g., *шинши́лла*, *ли́лия*, *защища́ть*). Renders connected handwriting and deconstructs continuous wave loops into color-coded letters on hover/tap.
 - **Cursive Tracing Canvas Pad:** Built-in HTML5 `<canvas>` in the inspector drawer equipped with authentic 65° slant guidelines and a letter watermark for freehand stroke practice.
 - **Global Toggles:** Instant toggle for stress marks across all Russian text.
+
+---
+
+## 🚀 How to Run & Use the Project (p≧w≦q)
+
+### 1. Live Demo (Fastest)
+No installation or local setup required. Open the live deployment directly in your browser:
+🔗 **[Launch Terra Russian Trainer](https://pokeballashy.github.io/terra-language-application/alphabet.html)**
+
+### 2. Running Locally
+Because Terra is built purely with vanilla web standards, you only need a local web server:
