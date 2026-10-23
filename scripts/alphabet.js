@@ -117,6 +117,10 @@ function updateInspector() {
             <div class="canvas-wrapper">
                <canvas id="cursive-canvas" width="240" height="160"></canvas>
             </div>
+            <div class="pad-controls">
+                <button type="button" class="pad-btn" id="btn-clear-canvas">Clear</button>
+                <button type="button" class="pad-btn" id="btn-grid-canvas">Toggle Grid</button>
+            </div>
         </div>
    `;
    initPracticeCanvas(selectedLetter.letter);
