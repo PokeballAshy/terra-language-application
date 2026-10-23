@@ -114,7 +114,7 @@ function updateInspector() {
         <!-- Cursive practice pad ;n; -->
         <div class="practice-pad-container">
             <h3>Cursive Tracing Pad</h3>
-            div class="canvas-wrapper">
+            <div class="canvas-wrapper">
                <canvas id="cursive-canvas" width="240" height="160"></canvas>
             </div>
         </div>
