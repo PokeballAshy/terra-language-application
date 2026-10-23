@@ -403,7 +403,7 @@ body.cursive-mode .example-word {
     margin: 0 auto;
     border: 2px dashed #ccc;
     border-radius: 8px;
-    background-color: fff;
+    background-color: #fff;
     touch-action: none;
 }
 
